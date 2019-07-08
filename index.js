@@ -13,6 +13,9 @@ import './style.css';
 // input: text = “(())”
 // output: 0
 
+// input: text = “())(”
+// output: 2
+
 
 function bracketMatch(inputString){
   let openCount = 0;
@@ -30,12 +33,12 @@ function bracketMatch(inputString){
       }
     }
   }
-  console.log(`${openCount+closeCount} needed.`);
-  console.log(`( ${closeCount} needed.`);
-  console.log(`) ${openCount} needed.`);
+  console.log(`${openCount+closeCount} brackets needed.`);
+  console.log(`( -> ${closeCount} needed.`);
+  console.log(`) -> ${openCount} needed.`);
 }
 
-bracketMatch(')(()))');
+bracketMatch(')(()))(');
 
 // Write Javascript code!
 const appDiv = document.getElementById('app');
