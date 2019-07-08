@@ -18,6 +18,7 @@ import './style.css';
 
 
 function bracketMatch(inputString){
+  console.log(`Input String: ${inputString}`);
   let openCount = 0;
   let closeCount = 0;
   for(let char of inputString){
